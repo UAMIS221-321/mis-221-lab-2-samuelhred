@@ -15,19 +15,19 @@ numberOfToppings = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter tip amount:");
 tip = double.Parse(Console.ReadLine());
 
-double sandwhichCost = 0;
-sandwhichCost = COST_OF_SANDWHICH * numberOfSandwhiches;
+double totalSandwhichCost = 0;
+totalSandwhichCost = COST_OF_SANDWHICH * numberOfSandwhiches;
 
-double toppingCost = 0;
-toppingCost = COST_OF_TOPPING * numberOfToppings;
+double totalToppingCost = 0;
+totalToppingCost = COST_OF_TOPPING * numberOfToppings;
 
-double cost = 0;
-cost = sandwhichCost + toppingCost;
+double baseCost = 0;
+baseCost = totalSandwhichCost + totalToppingCost;
 
-double order = 0;
-order = cost - (cost * DISCOUNT_AMOUNT);
+double orderCost = 0;
+orderCost = tip + baseCost * (1 - DISCOUNT_AMOUNT);
 
-Console.WriteLine("Your total cost is: " + order);
+Console.WriteLine("Your total cost is: " + orderCost);
 
 
 
